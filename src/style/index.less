@@ -185,6 +185,29 @@
     overflow: hidden;
   }
 
+  &-navbarside {
+    .react-viewer-list li {
+      display: block;
+      margin-top: 10px;
+    }
+    background-color: @btn-background-color;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1006;
+    justify-content: center;
+    right: 0;
+    height: 100%;
+    padding: 17px;
+  }
+
+  &-modal{
+    .react-viewer-navbarside{
+      position: fixed;
+      height: 100%;
+      top: 0;
+    }
+  }
+
   &-navbar-paginator {
     font-style: italic;
     position: absolute;

@@ -2,6 +2,7 @@ import * as React from 'react';
 import './style/index.less';
 import ViewerCanvas from './ViewerCanvas';
 import ViewerNav from './ViewerNav';
+import ViewerNavSide from './ViewerNavSide';
 import ViewerToolbar, { defaultToolbars } from './ViewerToolbar';
 import ViewerProps, { ImageDecorator, ToolbarConfig } from './ViewerProps';
 import Icon, { ActionType } from './Icon';
@@ -727,7 +728,16 @@ export default class ViewerCore extends React.Component<ViewerProps, ViewerCoreS
             <Icon type={ActionType.close} />
           </div>
         )}
-
+          {this.props.navBarSide &&  (
+            <ViewerNavSide
+              prefixCls={this.prefixCls}
+              images={this.props.images}
+              activeIndex={this.state.activeIndex}
+              onChangeImg={this.handleChangeImg}
+              showPaginator={this.props.showPaginator}
+            />
+          )}
+        
         {this.props.fullScreen ? (
           <div
             className={`${this.prefixCls}-fullScreen ${this.prefixCls}-btn`}
@@ -760,6 +770,7 @@ export default class ViewerCore extends React.Component<ViewerProps, ViewerCoreS
           onCanvasMouseDown={this.handleCanvasMouseDown}
           showTitle={this.props.showTitle}
         />
+
         {this.props.noFooter || (
           <div className={`${this.prefixCls}-footer`} style={{ zIndex: zIndex + 5 }}>
             {this.props.noToolbar || (
@@ -779,7 +790,7 @@ export default class ViewerCore extends React.Component<ViewerProps, ViewerCoreS
                 toolbars={this.props.customToolbar(defaultToolbars)}
               />
             )}
-            {this.props.noNavbar || (
+            {!this.props.noNavbar && !this.props.navBarSide &&
               <ViewerNav
                 prefixCls={this.prefixCls}
                 images={this.props.images}
@@ -787,7 +798,7 @@ export default class ViewerCore extends React.Component<ViewerProps, ViewerCoreS
                 onChangeImg={this.handleChangeImg}
                 showPaginator={this.props.showPaginator}
               />
-            )}
+            }
           </div>
         )}
       </div>

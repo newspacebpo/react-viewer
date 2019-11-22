@@ -8,11 +8,14 @@ export interface ViewerNavSideProps {
   showPaginator: boolean;
   onChangeImg: (index: number) => void;
 }
+var pxChange = -30;
 
 export default class ViewerNavSide extends React.Component<ViewerNavSideProps, any> {
   static defaultProps = {
     activeIndex: 0,
   };
+
+  
 
   handleChangeImg = (newIndex) => {
     if (this.props.activeIndex === newIndex) {
@@ -22,6 +25,11 @@ export default class ViewerNavSide extends React.Component<ViewerNavSideProps, a
   }
 
   render() {
+    let marginTop = 0
+    if(this.props.activeIndex > 0) marginTop = ((this.props.activeIndex - 1 ) * 2 * pxChange)
+    let listStyle = {
+      marginTop: `${marginTop}px`,
+    };
 
     let paginator = null;
     if (this.props.showPaginator) {
@@ -34,7 +42,7 @@ export default class ViewerNavSide extends React.Component<ViewerNavSideProps, a
 
     return (
       <div className={`${this.props.prefixCls}-navbarside`}>
-        <ul className={`${this.props.prefixCls}-list ${this.props.prefixCls}-list-transition`} >
+        <ul className={`${this.props.prefixCls}-list ${this.props.prefixCls}-list-transition`} style={listStyle}>
           {this.props.images.map((item, index) =>
             <li
             key={index}

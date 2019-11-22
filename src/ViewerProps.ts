@@ -61,7 +61,7 @@ interface ViewerProps {
   // no render navbar
   noNavbar?: boolean;
 
-  // no render navbar
+  // render sideNavBar
   navBarSide?: boolean;
 
   // no render toolbar

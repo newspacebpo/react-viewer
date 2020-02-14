@@ -14,15 +14,18 @@ const blobToBase64 = (data) => new Promise((response, reject) => {
 
 });
 const getBase64 = async (src) => {
-    const {data} = await axios.get(src, {
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        },
+    // const {data} = await axios.get(src, {
+    //     headers: {
+    //         'Access-Control-Allow-Origin': '*',
+    //     },
+    // });
+    fetch("https://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1b136a6704368419c2").then((response) => {
+        console.log(response.blob())
     });
-    const base64 = await blobToBase64(new Blob([data]));
+    // const base64 = await blobToBase64(new Blob([data]));
     console.log('src', src);
-    console.log('base64', base64);
-    return base64;
+    // console.log('base64', base64);
+    // return base64;
 };
 
 const styles = StyleSheet.create({

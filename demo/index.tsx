@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Viewer from '../src/Viewer';
-const img2 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec21136a6704368419cc';
-const img = 'https://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec19136a6704368419be';
+const img2 = 'https://img.freepik.com/fotos-gratis/arvore-3d-contra-um-ceu-do-por-do-sol_1048-9754.jpg?size=626&ext=jpg';
+const img = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec19136a6704368419be';
 const img3 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1a136a6704368419c0';
 const img4 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1b136a6704368419c2';
 const img5 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1c136a6704368419c4';

@@ -63,7 +63,8 @@
     "@react-pdf/renderer": "^1.6.8",
     "axios": "^0.19.2",
     "classnames": "^2.2.5",
-    "downloadjs": "^1.4.7"
+    "downloadjs": "^1.4.7",
+    "request-promise-native": "^1.0.8"
   },
   "pre-commit": [
     "lint"

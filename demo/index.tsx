@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Viewer from '../src/Viewer';
-const img2 = require('./images/landscape2.jpg');
-const img = require('./images/landscape.jpg');
-const img3 = require('./images/tibet-6.jpg');
-const img4 = require('./images/image4.jpg');
-const img5 = require('./images/418f4037db8ad4685aa604c503a09604.png');
-const forkImg = require('./images/fork_me_ribbon.svg');
+const img2 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec21136a6704368419cc';
+const img = 'https://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec19136a6704368419be';
+const img3 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1a136a6704368419c0';
+const img4 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1b136a6704368419c2';
+const img5 = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1c136a6704368419c4';
+const forkImg = 'http://storage-hmlg.nsportal.com.br/api/arquivo/5e43ec1d136a6704368419c6';
 import './index.less';
 import classNames from 'classnames';
 import { Row, Col, Button } from 'antd';

@@ -13,6 +13,7 @@ export interface ViewerNavProps {
 export default class ViewerNav extends React.Component<ViewerNavProps, any> {
   static defaultProps = {
     activeIndex: 0,
+    showToggleNav: true,
   };
   constructor(props) {
     super(props);
